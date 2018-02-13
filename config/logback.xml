@@ -1,0 +1,5 @@
+<configuration debug="true" scan="true" scanPeriod="1 minutes">
+    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator"/>
+    <include file="${LOGBACK_CONF_FILE}"/>
+
+</configuration>
