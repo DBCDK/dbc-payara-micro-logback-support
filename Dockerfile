@@ -18,4 +18,4 @@ ADD --chown=gfish ${PAYARA_DOWNLOAD_URL} /payara-micro/
 
 RUN unzip payara-micro-logback-${PAYARA_MICRO_VERSION}.zip && \
     mv payara-micro-logback-${PAYARA_MICRO_VERSION}/payara-micro.jar . && \
-    mv -r payara-micro-logback-${PAYARA_MICRO_VERSION}/libs .
+    mv payara-micro-logback-${PAYARA_MICRO_VERSION}/libs .
