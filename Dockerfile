@@ -1,4 +1,4 @@
-FROM docker.dbc.dk/payara-micro
+FROM docker.dbc.dk/payara-micro:io1578-logback-in-payara-micro
 
 MAINTAINER DataIO
 ARG PAYARA_MICRO_VERSION="4.1.2.181"
