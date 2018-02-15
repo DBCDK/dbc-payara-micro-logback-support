@@ -2,6 +2,7 @@ FROM docker.dbc.dk/payara-micro:io1578-logback-in-payara-micro
 
 MAINTAINER DataIO
 ARG PAYARA_MICRO_VERSION="4.1.2.181"
+LABEL PayaraMicroVersion=$PAYARA_MICRO_VERSION
 ARG PAYARA_DOWNLOAD_URL="http://mavenrepo.dbc.dk/content/repositories/releases/dk/dbc/payara-micro-logback/${PAYARA_MICRO_VERSION}/payara-micro-logback-${PAYARA_MICRO_VERSION}.zip"
 ENV ADD_JVM_ARGS="-Dlogback.configurationFile=config/logback.xml"
 ENV ADD_PAYARA_ARGS="--logproperties config/logging.properties"
