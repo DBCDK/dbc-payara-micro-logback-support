@@ -17,5 +17,5 @@ ADD 00-get-logback-conf.sh config.d/
 ADD --chown=gfish ${PAYARA_DOWNLOAD_URL} /payara-micro/
 
 RUN unzip payara-micro-logback-${PAYARA_MICRO_VERSION}.zip && \
-    cp payara-micro-logback-${PAYARA_MICRO_VERSION}/payara-micro.jar . && \
-    cp -r payara-micro-logback-${PAYARA_MICRO_VERSION}/libs .
+    mv payara-micro-logback-${PAYARA_MICRO_VERSION}/payara-micro.jar . && \
+    mv -r payara-micro-logback-${PAYARA_MICRO_VERSION}/libs .
