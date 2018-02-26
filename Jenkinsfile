@@ -9,17 +9,15 @@ def next_4_version="4.1.2.183"
 def next_5_version="5.0.0.Beta2"
 
 void tag_and_push(imageName, tagName, branch){
-    name = imageName.toLowerCase()
     if(branch=='master') {
-        sh "docker tag docker.dbc.dk/${name} docker.dbc.dk/${tagName}"
+        sh "docker tag docker.dbc.dk/${imageName} docker.dbc.dk/${tagName}"
         sh "docker push docker.dbc.dk/${tagName}"
     }
 }
 
 
 void build_and_push( imageName, version, buildnum ){
-    name = imageName.toLowerCase()
-    image=docker.build( "${name}:${version}-${buildnum}",
+    image=docker.build( "${imageName}:${version}-${buildnum}",
                         "--build-arg PAYARA_MICRO_VERSION=${version} --pull --no-cache ." )
     docker.withRegistry( 'https://docker.dbc.dk', 'docker' ) {
         image.push()
