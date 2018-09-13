@@ -1,5 +1,5 @@
 #!/bin/bash
-curl -L -o config/logback-included.xml --fail $LOGBACK_URL
+curl -L -o $LOGBACK_CONF_FILE --fail $LOGBACK_URL
 
 if [ $? -eq 0 ]; then
     echo "===> fetched logback url:${LOGBACK_URL}"
@@ -8,4 +8,4 @@ else
 fi
 
 echo "===> Using this logback.xml:"
-cat config/logback-included.xml
+cat $LOGBACK_CONF_FILE 

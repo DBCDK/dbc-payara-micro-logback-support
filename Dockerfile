@@ -6,10 +6,10 @@ LABEL PayaraMicroVersion=$PAYARA_MICRO_VERSION
 ARG PAYARA_DOWNLOAD_URL="http://mavenrepo.dbc.dk/content/repositories/releases/dk/dbc/payara-micro-logback/${PAYARA_MICRO_VERSION}/payara-micro-logback-${PAYARA_MICRO_VERSION}.zip"
 ENV ADD_JVM_ARGS="-Dlogback.configurationFile=config/logback.xml"
 ENV ADD_PAYARA_ARGS="--logproperties config/logging.properties"
-ENV LOGBACK_CONF_FILE=config/logback-included.xml
+ENV LOGBACK_CONF_FILE=config.d/logback-included.xml
 
 USER root
-RUN apt-get update && apt-get -qy install unzip
+RUN apt-get update && apt-get -qy install unzip curl
 
 USER gfish
 ADD config/* config/
