@@ -48,7 +48,7 @@ pipeline {
                     }
 
 
-                    stage("payara4-next") {
+/*                    stage("payara4-next") {
                         steps {
                             build_and_push( imageName, next_4_version, env.BUILD_NUMBER )
 
@@ -57,7 +57,7 @@ pipeline {
                                             env.BRANCH_NAME  )
                         }
                     }
-
+*/
                     stage("payara5-current") {
                         steps {
                             build_and_push( imageName, current_5_version, env.BUILD_NUMBER )
@@ -72,7 +72,7 @@ pipeline {
                         }
                     }
 
-                    stage("payara5-next") {
+/*                    stage("payara5-next") {
                         steps {
                             build_and_push( imageName, next_5_version, env.BUILD_NUMBER )
 
@@ -81,7 +81,7 @@ pipeline {
                                             env.BRANCH_NAME  )
                         }
                     }
-
+*/
 
                 }
 
