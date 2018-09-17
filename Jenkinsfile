@@ -4,7 +4,7 @@ def workerNode = 'devel8'
 def imageName = 'dbc-payara-micro-logback'
 
 def current_4_version="4.1.2.181"
-def current_5_version="5.0.0.Alpha3"
+def current_5_version="5.183"
 def next_4_version="4.1.2.183"
 def next_5_version="5.0.0.Beta2"
 
